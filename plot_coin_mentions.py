@@ -25,11 +25,11 @@ def find_sym_comments(symbol, name):
 
 
 def plot_mentions(symbol_data):
-	symoccurances_df = pd.DataFrame(symbol_data['comments'])
+	symoccurances_df = pd.DataFrame(symbol_data)
 	symoccurances_df.head()
 	plt.figure()
 	symoccurances_df.time.plot(kind='hist', bins = 300, title=symbol_data['coin'])
-	pname = symbol_data['coin'] + "plot_jan1.png"
+	pname = symbol_data['coin'] + "plot_jan1_sent.png"
 	plt.savefig(pname)
 	plt.close()
 
